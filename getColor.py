@@ -20,10 +20,10 @@ while True:
     imageColor, mask = myColorFinder.update(img, hsvVals)
 
     # Remove unnecessary noise from mask
-    mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
-    mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)
+    mask_denoise = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
+    mask_denoise = cv2.morphologyEx(mask_denoise, cv2.MORPH_OPEN, kernel)
 
-    imageStack = cvzone.stackImages([img, mask, imageColor], 2, 0.5)
+    imageStack = cvzone.stackImages([img, imageColor, mask, mask_denoise], 2, 0.5)
     cv2.imshow("imageStack", imageStack)
 
 
