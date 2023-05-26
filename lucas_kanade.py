@@ -2,7 +2,7 @@ import numpy as np
 import cv2 as cv
 import argparse
 
-cap = cv.VideoCapture("slow_traffic_small.mp4")
+cap = cv.VideoCapture("video/slow_traffic_small.mp4")
 
 # params for ShiTomasi corner detection
 feature_params = dict( maxCorners = 100,

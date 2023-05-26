@@ -15,7 +15,8 @@ if(1):
     while True:
         #This is to check whether to break the first loop
         isclosed=0
-        cap = cv2.VideoCapture('video/tes_31_03_2023_2.mp4')
+        cap = cv2.VideoCapture('video/tes_di_wisnu_3.mp4')
+        # cap = cv2.VideoCapture(0)
         cap.set(3, 1280)
         cap.set(4, 720)
 
