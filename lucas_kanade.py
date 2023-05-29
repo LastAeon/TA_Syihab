@@ -3,7 +3,8 @@ import cv2 as cv
 import argparse
 
 cap = cv.VideoCapture("video/slow_traffic_small.mp4")
-
+cap.set(3, 1280)
+cap.set(4, 720)
 # params for ShiTomasi corner detection
 feature_params = dict( maxCorners = 100,
                        qualityLevel = 0.3,
@@ -22,11 +23,17 @@ color = np.random.randint(0, 255, (100, 3))
 ret, old_frame = cap.read()
 old_gray = cv.cvtColor(old_frame, cv.COLOR_BGR2GRAY)
 p0 = cv.goodFeaturesToTrack(old_gray, mask = None, **feature_params)
+print(p0, type(p0), p0.shape, type(p0[0,0,0]))
+p0 = np.array([[[1, 1, 1], [1, 1, 1]]])
+print(p0, type(p0), p0.shape, type(p0[0,0,0]))
+p0 = np.float32([[[374.0, 196.0]]])
+print(p0, type(p0), p0.shape, type(p0[0,0,0]))
 
 # Create a mask image for drawing purposes
 mask = np.zeros_like(old_frame)
 
 while(1):
+    # print("looping!")
     ret, frame = cap.read()
     if not ret:
         print('No frames grabbed!')
