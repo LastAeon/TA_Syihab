@@ -1,7 +1,7 @@
 #!/bin/bash
-host_moses="192.168.161.30"
-host_jose="192.168.161.156"
-host_wisnu="192.168.161.78"
+host_moses="192.168.26.30"
+host_jose="192.168.26.156"
+host_wisnu="192.168.26.78"
 host_syihab="10.178.253.93"
 
 
