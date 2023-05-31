@@ -5,7 +5,8 @@ import numpy as np
 
 
 myColorFinder = ColorFinder(1)
-hsvVals = {'hmin': 0, 'smin': 96, 'vmin': 160, 'hmax': 31, 'smax': 255, 'vmax': 255}
+hsvVals = {'hmin': 23, 'smin': 41, 'vmin': 126, 'hmax': 62, 'smax': 174, 'vmax': 227}
+# hsvVals = {'hmin': 45, 'smin': 80, 'vmin': 98, 'hmax': 56, 'smax': 140, 'vmax': 255}
 # {'hmin': 33, 'smin': 72, 'vmin': 126, 'hmax': 58, 'smax': 255, 'vmax': 255} # hijau
 # hsvVals = {'hmin': 6, 'smin': 42, 'vmin': 53, 'hmax': 32, 'smax': 206, 'vmax': 156} # kulit
 
@@ -15,7 +16,7 @@ if(1):
     while True:
         #This is to check whether to break the first loop
         isclosed=0
-        cap = cv2.VideoCapture('video/tes_di_wisnu_3.mp4')
+        cap = cv2.VideoCapture('video/take1/tengah/VID_tes1_1.mp4')
         # cap = cv2.VideoCapture(0)
         cap.set(3, 1280)
         cap.set(4, 720)
@@ -25,6 +26,9 @@ if(1):
             # h, w, _ = img.shape
             if np.shape(img) == ():
                  break
+            img = cv2.resize(img, (2560, 1440))
+            # img = cv2.resize(img, (1280, 720))
+            # img = cv2.resize(img, (640, 360))
             imageColor, mask = myColorFinder.update(img, hsvVals)
 
             # Remove unnecessary noise from mask
@@ -32,6 +36,7 @@ if(1):
             mask_denoise = cv2.morphologyEx(mask_denoise, cv2.MORPH_OPEN, kernel)
 
             imageStack = cvzone.stackImages([img, imageColor, mask, mask_denoise], 2, 0.5)
+            imageStack = cv2.resize(imageStack, (640, 360))
             cv2.imshow("imageStack", imageStack)
 
 
