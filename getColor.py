@@ -5,7 +5,7 @@ import numpy as np
 
 
 myColorFinder = ColorFinder(1)
-hsvVals = {'hmin': 23, 'smin': 41, 'vmin': 126, 'hmax': 62, 'smax': 174, 'vmax': 227}
+hsvVals = {'hmin': 45, 'smin': 80, 'vmin': 98, 'hmax': 56, 'smax': 140, 'vmax': 255}
 # hsvVals = {'hmin': 45, 'smin': 80, 'vmin': 98, 'hmax': 56, 'smax': 140, 'vmax': 255}
 # {'hmin': 33, 'smin': 72, 'vmin': 126, 'hmax': 58, 'smax': 255, 'vmax': 255} # hijau
 # hsvVals = {'hmin': 6, 'smin': 42, 'vmin': 53, 'hmax': 32, 'smax': 206, 'vmax': 156} # kulit
