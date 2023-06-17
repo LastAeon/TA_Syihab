@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 
 
-hsvVals = {'hmin': 140, 'smin': 41, 'vmin': 107, 'hmax': 162, 'smax': 148, 'vmax': 255}
+hsvVals = {'hmin': 110, 'smin': 24, 'vmin': 107, 'hmax': 162, 'smax': 148, 'vmax': 255}
 
 myColorFinder = ColorFinder(1, hsvVals)
 
@@ -14,7 +14,7 @@ if(1):
     while True:
         #This is to check whether to break the first loop
         isclosed=0
-        cap = cv2.VideoCapture('video/take2/tengah/VID_gerakan3.mp4')
+        cap = cv2.VideoCapture('video/take2/kiri/VID_gerakan4.mp4')
         # cap = cv2.VideoCapture(0)
         cap.set(3, 1280)
         cap.set(4, 720)
