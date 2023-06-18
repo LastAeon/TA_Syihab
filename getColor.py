@@ -4,23 +4,25 @@ import cv2
 import numpy as np
 
 
-hsvVals = {'hmin': 110, 'smin': 24, 'vmin': 107, 'hmax': 162, 'smax': 148, 'vmax': 255}
+hsvVals = {'hmin': 0, 'smin': 86, 'vmin': 108, 'hmax': 4, 'smax': 231, 'vmax': 255}
 
 myColorFinder = ColorFinder(1, hsvVals)
 
 #define kernel size  
 kernel = np.ones((7,7),np.uint8)
+pause = False
 if(1):
     while True:
         #This is to check whether to break the first loop
         isclosed=0
-        cap = cv2.VideoCapture('video/take2/kiri/VID_gerakan4.mp4')
+        cap = cv2.VideoCapture('video/take3/kanan/VID_move.mp4')
         # cap = cv2.VideoCapture(0)
         cap.set(3, 1280)
         cap.set(4, 720)
 
         while True:
-            success, img = cap.read()
+            if not(pause):
+                success, img = cap.read()
             # h, w, _ = img.shape
             if np.shape(img) == ():
                  break
@@ -38,6 +40,8 @@ if(1):
             imageStack = cv2.resize(imageStack, (960, 540))
             cv2.imshow("imageStack", imageStack)
 
+            if cv2.waitKey(2) & 0xFF == ord('p'):
+                    pause = not(pause)
 
             if cv2.waitKey(2) & 0xFF == ord('q'):
                     # cap.release()
