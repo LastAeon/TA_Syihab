@@ -4,20 +4,20 @@ import cv2
 import numpy as np
 
 warnaBolaHsv = {
-        "kuning_kotak"      : {'hmin': 23, 'smin': 153, 'vmin': 139, 'hmax': 50, 'smax': 255, 'vmax': 255},
-        # "hijau_tua"         : {'hmin': 64, 'smin': 26, 'vmin': 75, 'hmax': 79, 'smax': 199, 'vmax': 255},    # bola hijau tua
-        # "biru_muda"         : {'hmin': 89, 'smin': 30, 'vmin': 124, 'hmax': 140, 'smax': 146, 'vmax': 255},   # bola biru muda
-        # "biru_telur_unta"   : {'hmin': 80, 'smin': 80, 'vmin': 57, 'hmax': 95, 'smax': 227, 'vmax': 255},    # bola biru telur unta
-        # "oranye_kotak"      : {'hmin': 4, 'smin': 120, 'vmin': 184, 'hmax': 24, 'smax': 241, 'vmax': 255},     # bola oranye
-        # "pink_kotak"        : {'hmin': 139, 'smin': 35, 'vmin': 155, 'hmax': 170, 'smax': 160, 'vmax': 255},   # bola pink kotak
-        # "ungu"              : {'hmin': 140, 'smin': 56, 'vmin': 107, 'hmax': 162, 'smax': 120, 'vmax': 255},   # ungu
-        # "merah_kotak"       : {'hmin': 0, 'smin': 86, 'vmin': 108, 'hmax': 2, 'smax': 231, 'vmax': 255}, # terlalu mirip oren
+        "kuning_kotak"      : {'hmin': 15, 'smin': 153, 'vmin': 139, 'hmax': 50, 'smax': 255, 'vmax': 255},
+        "hijau_tua"         : {'hmin': 64, 'smin': 110, 'vmin': 75, 'hmax': 87, 'smax': 199, 'vmax': 255},    # bola hijau tua
+        "biru_muda"         : {'hmin': 90, 'smin': 67, 'vmin': 124, 'hmax': 107, 'smax': 99, 'vmax': 255},   # bola biru muda
+        "biru_telur_unta"   : {'hmin': 80, 'smin': 80, 'vmin': 57, 'hmax': 95, 'smax': 227, 'vmax': 255},    # bola biru telur unta
+        "oranye_kotak"      : {'hmin': 5, 'smin': 126, 'vmin': 182, 'hmax': 15, 'smax': 241, 'vmax': 255},     # bola oranye
+        "pink_kotak"        : {'hmin': 160, 'smin': 41, 'vmin': 107, 'hmax': 170, 'smax': 201, 'vmax': 255},   # bola pink kotak
+        "ungu"              : {'hmin': 140, 'smin': 73, 'vmin': 70, 'hmax': 155, 'smax': 137, 'vmax': 255},   # ungu
+        "biru_kotak"        : {'hmin': 109, 'smin': 84, 'vmin': 145, 'hmax': 130, 'smax': 255, 'vmax': 255}, # terlalu mirip oren
     }
 #define kernel size  
 kernel = np.ones((7,7),np.uint8)
 pause = False
 
-img = cv2.imread("video/take3/kiri/IMG_20230616_150223.jpg")
+img = cv2.imread("video/take4/kanan/IMG_DefaultPose.jpg")
 # img = cv2.resize(img, (5120, 2880))
 img = cv2.resize(img, (2560, 1440))
 imgCopy = img.copy()
