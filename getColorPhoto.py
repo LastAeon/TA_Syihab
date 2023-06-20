@@ -17,7 +17,7 @@ warnaBolaHsv = {
 kernel = np.ones((7,7),np.uint8)
 pause = False
 
-img = cv2.imread("video/take3/kanan/IMG_default_pose_4.jpg")
+img = cv2.imread("video/take3/kiri/IMG_20230616_150223.jpg")
 # img = cv2.resize(img, (5120, 2880))
 img = cv2.resize(img, (2560, 1440))
 imgCopy = img.copy()

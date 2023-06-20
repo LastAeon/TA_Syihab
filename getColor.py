@@ -3,8 +3,18 @@ import cvzone
 import cv2
 import numpy as np
 
+warnaBolaHsv = {
+        "kuning_kotak"      : {'hmin': 15, 'smin': 153, 'vmin': 139, 'hmax': 50, 'smax': 255, 'vmax': 255},
+        "hijau_tua"         : {'hmin': 64, 'smin': 110, 'vmin': 75, 'hmax': 87, 'smax': 199, 'vmax': 255},    # bola hijau tua
+        "biru_muda"         : {'hmin': 98, 'smin': 67, 'vmin': 124, 'hmax': 107, 'smax': 146, 'vmax': 255},   # bola biru muda
+        "biru_telur_unta"   : {'hmin': 80, 'smin': 80, 'vmin': 57, 'hmax': 95, 'smax': 227, 'vmax': 255},    # bola biru telur unta
+        "oranye_kotak"      : {'hmin': 5, 'smin': 126, 'vmin': 182, 'hmax': 9, 'smax': 241, 'vmax': 255},     # bola oranye
+        "pink_kotak"        : {'hmin': 160, 'smin': 41, 'vmin': 107, 'hmax': 170, 'smax': 201, 'vmax': 255},   # bola pink kotak
+        "ungu"              : {'hmin': 140, 'smin': 56, 'vmin': 70, 'hmax': 155, 'smax': 137, 'vmax': 255},   # ungu
+        "biru_kotak"        : {'hmin': 109, 'smin': 84, 'vmin': 145, 'hmax': 130, 'smax': 255, 'vmax': 255}, # terlalu mirip oren
+    }
 
-hsvVals = {'hmin': 0, 'smin': 86, 'vmin': 108, 'hmax': 4, 'smax': 231, 'vmax': 255}
+hsvVals = warnaBolaHsv["kuning_kotak"]
 
 myColorFinder = ColorFinder(1, hsvVals)
 
@@ -15,7 +25,7 @@ if(1):
     while True:
         #This is to check whether to break the first loop
         isclosed=0
-        cap = cv2.VideoCapture('video/take3/kanan/VID_move.mp4')
+        cap = cv2.VideoCapture('video/take4/kanan/VID_DefaultPose.mp4')
         # cap = cv2.VideoCapture(0)
         cap.set(3, 1280)
         cap.set(4, 720)
