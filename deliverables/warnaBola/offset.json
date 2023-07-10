@@ -1,0 +1,21 @@
+{
+    "format" :
+    {
+        "pertemuan keberapa" : {
+            "nama video" : ["center", "right", "left"]
+        }
+    },
+    "take4" : {
+        "VID_DefaultPose" : [4, 10, 0],
+        "VID_DefaultPose_1" : [5, 9, 0],
+        "VID_DefaultPose_2" : [0, 6, 1],
+        "VID_DefaultPose_3" : [2, 7, 0],
+        "VID_DefPose_Take2" : [7, 12, 1], 
+        "VID_DefPose_Take2_1" : [4, 9, 0],
+        "VID_DefPose_Take3" : [6, 8, 0], 
+        "VID_DefPose_Take3_1" : [1, 3, 1], 
+        "VID_DefPose_Take3_2" : [1, 6, 0], 
+        "VID_DefPose_Take3_3" : [3, 6, 1],
+        "VID_DefPose_Take4" : [1, 5, 0]
+    }
+}

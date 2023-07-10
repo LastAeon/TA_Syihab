@@ -1,7 +1,9 @@
 #!/bin/bash
-host_moses="192.168.189.30"
-host_jose="192.168.189.156"
-host_wisnu="192.168.189.78"
+host_depan="192.168."
+host_tengah="116."
+host_moses=$host_depan$host_tengah"30"
+host_jose=$host_depan$host_tengah"156"
+host_wisnu=$host_depan$host_tengah"78"
 host_syihab="10.178.253.93"
 
 # # start taking photos

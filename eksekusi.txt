@@ -1,0 +1,10 @@
+python deliverables/getColor.py video/take4/tengah/VID_DefaultPose_1.mp4  namaWarna.txt Warna1
+python deliverables/objectDetection.py kalman_filter offset.json warnaTengah.json warnaKanan.json warnaKiri.json VID_DefaultPose_1 objectDetection_sample
+python deliverables/objectDetection.py optical_flow offset.json warnaTengah.json warnaKanan.json warnaKiriAlternatif.json VID_DefPose_Take3 objectDetection_sample
+
+
+
+
+no_tracking
+kalman_filter
+optical_flow

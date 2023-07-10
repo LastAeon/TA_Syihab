@@ -1,0 +1,10 @@
+{
+    "kuning_kotak"      : {"hmin": 15, "smin": 153, "vmin": 139, "hmax": 50, "smax": 255, "vmax": 255},
+    "hijau_tua"         : {"hmin": 64, "smin": 110, "vmin": 75, "hmax": 87, "smax": 199, "vmax": 255},    
+    "biru_muda"         : {"hmin": 94, "smin": 40, "vmin": 96, "hmax": 107, "smax": 96, "vmax": 255},   
+    "biru_telur_unta"   : {"hmin": 80, "smin": 80, "vmin": 57, "hmax": 95, "smax": 227, "vmax": 255},    
+    "oranye_kotak"      : {"hmin": 5, "smin": 70, "vmin": 182, "hmax": 15, "smax": 241, "vmax": 255},     
+    "pink_kotak"        : {"hmin": 160, "smin": 41, "vmin": 107, "hmax": 170, "smax": 201, "vmax": 255},   
+    "ungu"              : {"hmin": 140, "smin": 56, "vmin": 70, "hmax": 155, "smax": 137, "vmax": 255},   
+    "biru_kotak"        : {"hmin": 109, "smin": 84, "vmin": 145, "hmax": 130, "smax": 255, "vmax": 255}
+}
